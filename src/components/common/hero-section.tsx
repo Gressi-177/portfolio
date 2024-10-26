@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <div>
+    <div className="flex justify-between items-center">
       <div className="space-y-10">
         <h1 className="text-7xl font-bold">
           Nice to meet you! 👋
@@ -28,7 +28,19 @@ export default function HeroSection() {
           </div>
         </Link>
       </div>
-      <div></div>
+      <div className="relative">
+        <div className="-rotate-[30deg] relative space-y-3 w-72 h-72">
+          <div className="flex gap-3 translate-x-8">
+            <div className="w-32 h-32 rounded-2xl bg-green-500"></div>
+            <div className="w-32 h-32 rounded-full bg-indigo-500"></div>
+          </div>
+          <div className="flex gap-3 -translate-x-8">
+            <div className="w-32 h-32 rounded-2xl bg-indigo-500"></div>
+            <div className="w-32 h-32 rounded-full bg-green-500"></div>
+          </div>
+          <div className="glow absolute top-[40%] -z-10 left-1/2"></div>
+        </div>
+      </div>
     </div>
   );
 }
