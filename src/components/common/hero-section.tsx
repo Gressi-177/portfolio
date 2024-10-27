@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import Button from '../base/moving-border'
+import Button from '../ui/moving-border'
 
 export default function HeroSection() {
   return (

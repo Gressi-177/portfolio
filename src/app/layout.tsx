@@ -1,9 +1,8 @@
 import type { Metadata } from 'next'
 
 import { spaceGrotesk } from '@/lib/fonts'
-import { ThemeProvider } from '@/components/base/theme-provider'
+import { ThemeProvider } from '@/components/ui/theme-provider'
 
-import '@/styles/globals.scss'
 import '@/styles/globals.scss'
 
 export const metadata: Metadata = {
