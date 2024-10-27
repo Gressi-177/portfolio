@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Button from "../base/moving-border";
 
 export default function HeroSection() {
   return (
@@ -39,6 +40,17 @@ export default function HeroSection() {
             <div className="w-32 h-32 rounded-full bg-green-500"></div>
           </div>
           <div className="glow absolute top-[40%] -z-10 left-1/2"></div>
+        </div>
+        <div className="absolute bottom-5 sm:bottom-14 left-0 sm:-left-10">
+          <Link href="/Tran-Viet-Doan_Frontend_CV.pdf" download>
+            <Button
+              borderRadius="0.5rem"
+              containerClassName="w-max h-max bg-transparent"
+              className="text-white border-slate-800 p-3 font-semibold"
+            >
+              📢 Available for Work
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
