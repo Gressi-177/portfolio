@@ -1,29 +1,30 @@
-"use client";
+'use client'
 
-import { cn } from "@/lib/utils";
+import { ElementType, useRef } from 'react'
 import {
   motion,
   useAnimationFrame,
   useMotionTemplate,
   useMotionValue,
   useTransform,
-} from "framer-motion";
-import { ElementType, useRef } from "react";
+} from 'framer-motion'
+
+import { cn } from '@/lib/utils'
 
 interface ButtonProps {
-  borderRadius?: string;
-  children?: React.ReactNode;
-  as?: ElementType;
-  containerClassName?: string;
-  className?: string;
-  borderClassName?: string;
-  duration?: number;
+  borderRadius?: string
+  children?: React.ReactNode
+  as?: ElementType
+  containerClassName?: string
+  className?: string
+  borderClassName?: string
+  duration?: number
 }
 
 export default function Button({
-  borderRadius = "1.75rem",
+  borderRadius = '1.75rem',
   children,
-  as: Component = "button",
+  as: Component = 'button',
   containerClassName,
   borderClassName,
   duration,
@@ -33,7 +34,7 @@ export default function Button({
   return (
     <Component
       className={cn(
-        "bg-transparent relative text-xl h-16 w-40 p-[1px] overflow-hidden ",
+        'relative h-16 w-40 overflow-hidden bg-transparent p-px text-xl',
         containerClassName
       )}
       style={{ borderRadius: borderRadius }}
@@ -46,7 +47,7 @@ export default function Button({
         <MovingBorder duration={duration}>
           <div
             className={cn(
-              "h-20 w-20 opacity-[0.8] bg-[radial-gradient(var(--sky-500)_40%,transparent_60%)]",
+              'size-20 bg-[radial-gradient(var(--sky-500)_40%,transparent_60%)] opacity-80',
               borderClassName
             )}
           />
@@ -54,7 +55,7 @@ export default function Button({
       </div>
       <div
         className={cn(
-          "relative bg-slate-900/[0.8] border border-slate-800 text-white flex items-center justify-center w-full h-full text-sm antialiased",
+          'relative flex size-full items-center justify-center border border-slate-800 bg-slate-900/[0.8] text-sm text-white antialiased',
           className
         )}
         style={{
@@ -64,14 +65,14 @@ export default function Button({
         {children}
       </div>
     </Component>
-  );
+  )
 }
 
 interface MovingBorderProps {
-  children: React.ReactNode;
-  duration?: number;
-  rx?: string;
-  ry?: string;
+  children: React.ReactNode
+  duration?: number
+  rx?: string
+  ry?: string
 }
 
 const MovingBorder = ({
@@ -81,32 +82,32 @@ const MovingBorder = ({
   ry,
   ...props
 }: MovingBorderProps) => {
-  const pathRef = useRef<SVGRectElement>(null);
-  const progress = useMotionValue<number>(0);
+  const pathRef = useRef<SVGRectElement>(null)
+  const progress = useMotionValue<number>(0)
   useAnimationFrame((time) => {
-    const length = pathRef.current?.getTotalLength();
+    const length = pathRef.current?.getTotalLength()
     if (length) {
-      const pxPerMillisecond = length / duration;
-      progress.set((time * pxPerMillisecond) % length);
+      const pxPerMillisecond = length / duration
+      progress.set((time * pxPerMillisecond) % length)
     }
-  });
+  })
 
   const x = useTransform(
     progress,
     (val) => pathRef.current?.getPointAtLength(val).x ?? 0
-  );
+  )
   const y = useTransform(
     progress,
     (val) => pathRef.current?.getPointAtLength(val).y ?? 0
-  );
+  )
 
-  const transform = useMotionTemplate`translateX(${x}px) translateY(${y}px) translateX(-50%) translateY(-50%)`;
+  const transform = useMotionTemplate`translateX(${x}px) translateY(${y}px) translateX(-50%) translateY(-50%)`
   return (
     <>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         preserveAspectRatio="none"
-        className="absolute h-full w-full"
+        className="absolute size-full"
         width="100%"
         height="100%"
         {...props}
@@ -122,15 +123,15 @@ const MovingBorder = ({
       </svg>
       <motion.div
         style={{
-          position: "absolute",
+          position: 'absolute',
           top: 0,
           left: 0,
-          display: "inline-block",
+          display: 'inline-block',
           transform,
         }}
       >
         {children}
       </motion.div>
     </>
-  );
-};
+  )
+}

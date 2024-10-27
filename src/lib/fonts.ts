@@ -1,5 +1,5 @@
-import { Space_Grotesk } from "next/font/google";
+import { Space_Grotesk } from 'next/font/google'
 
 export const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-});
+  subsets: ['latin'],
+})
