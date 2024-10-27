@@ -4,9 +4,9 @@ import Button from '../base/moving-border'
 
 export default function HeroSection() {
   return (
-    <div className="relative z-10 flex min-h-[60vh] flex-col items-center justify-between gap-14 md:gap-0">
-      <div className="order-2 flex flex-col items-center space-y-10 text-center">
-        <h1 className="text-4xl font-bold md:text-7xl">
+    <div className="relative z-10 flex min-h-[60vh] flex-col items-center justify-between gap-14 lg:flex-row lg:gap-0">
+      <div className="order-2 flex flex-col items-center space-y-10 text-center lg:order-1 lg:items-start lg:text-start">
+        <h1 className="text-4xl font-bold lg:text-7xl">
           Nice to meet you! 👋
           <br />
           <span className="underline decoration-green-500 underline-offset-8">
