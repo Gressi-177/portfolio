@@ -1,8 +1,13 @@
 import Link from "next/link";
 import React from "react";
-import { SiGithub, SiX, SiLinkedin } from "react-icons/si";
+import { SiGithub, SiX, SiLinkedin, SiFacebook } from "react-icons/si";
 export default function NavBar() {
   const socials = [
+    {
+      lable: "Facebook",
+      url: "facebook.com/gressi.177",
+      icon: SiFacebook,
+    },
     {
       lable: "Twitter",
       url: "twitter.com/gressi_177",
