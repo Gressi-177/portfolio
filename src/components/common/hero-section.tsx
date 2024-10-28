@@ -43,7 +43,12 @@ export default function HeroSection() {
           <div className="glow absolute left-1/2 top-[40%] -z-10"></div>
         </div>
         <div className="absolute bottom-5 left-0 sm:-left-10 sm:bottom-14">
-          <Link href="/Tran-Viet-Doan_Frontend_CV.pdf" download>
+          <Link
+            href="/Tran-Viet-Doan_Frontend_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            download
+          >
             <Button
               borderRadius="0.5rem"
               containerClassName="w-max h-max bg-transparent"

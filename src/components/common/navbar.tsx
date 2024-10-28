@@ -37,6 +37,7 @@ export default function NavBar({ className }: { className?: string }) {
           return (
             <Link
               key={social.lable}
+              aria-label={social.lable}
               href={`https://${social.url}`}
               target="_blank"
               rel="noreferrer"
