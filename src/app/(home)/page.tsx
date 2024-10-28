@@ -1,6 +1,7 @@
 import HeroSection from '@/components/common/hero-section'
 import NavBar from '@/components/common/navbar'
 import ProjectSection from '@/components/common/project-section'
+import SkillSection from '@/components/common/skill-section'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       </div>
       <div className="mx-auto mt-20 max-w-7xl p-5">
         <ProjectSection />
+        <SkillSection />
       </div>
     </div>
   )
