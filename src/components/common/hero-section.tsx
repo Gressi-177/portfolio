@@ -4,7 +4,7 @@ import Button from '../ui/moving-border'
 
 export default function HeroSection() {
   return (
-    <div className="relative z-10 flex min-h-[60vh] flex-col items-center justify-between gap-14 lg:flex-row lg:gap-0">
+    <div className="relative z-10 flex min-h-[60vh] animate-move-up flex-col items-center justify-between gap-14 lg:flex-row lg:gap-0">
       <div className="order-2 flex flex-col items-center space-y-10 text-center lg:order-1 lg:items-start lg:text-start">
         <h1 className="text-4xl font-bold lg:text-7xl">
           Nice to meet you! 👋
