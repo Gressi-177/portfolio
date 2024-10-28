@@ -55,10 +55,10 @@ export default function ProjectSection() {
         {projects.map((item, index) => {
           return (
             <Link key={index} href={item.url} target="_blank" rel="noreferrer">
-              <div className="rounded-2xl bg-green-500 p-4">
+              <div className="rounded-lg bg-green-500 p-2">
                 <DirectionAwareHover
                   imageUrl={item.imageUrl}
-                  className="!size-full rounded-lg"
+                  className="!size-full rounded-md"
                   imageClassName="scale-[1.2]"
                 >
                   <div className="space-y-5">
