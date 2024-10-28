@@ -5,8 +5,10 @@ import { ThemeProvider } from '@/components/ui/theme-provider'
 
 import '@/styles/globals.scss'
 
+const url = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+
 export const metadata: Metadata = {
-  metadataBase: new URL('http://localhost:3000'),
+  metadataBase: new URL(url),
   title: 'asmodeus',
   authors: {
     name: 'Viet Doan',
@@ -39,7 +41,7 @@ export const metadata: Metadata = {
     title: 'asmodeus',
     description:
       "Based in VietNam, I'm a web developer passionate about building a modern web application that users love.",
-    url: 'http://localhost:3000/',
+    url: url,
     siteName: 'asmodeus',
     images: '/og.png',
     type: 'website',
