@@ -1,7 +1,9 @@
 import Link from 'next/link'
 import { SiFacebook, SiGithub, SiLinkedin, SiX } from 'react-icons/si'
 
-export default function NavBar() {
+import { cn } from '@/lib/utils'
+
+export default function NavBar({ className }: { className?: string }) {
   const socials = [
     {
       lable: 'Facebook',
@@ -25,7 +27,7 @@ export default function NavBar() {
     },
   ]
   return (
-    <nav className="flex items-center justify-between py-10">
+    <nav className={cn('flex items-center justify-between py-10', className)}>
       <h1 className="-rotate-2 text-2xl font-bold underline decoration-green-500 underline-offset-8">
         Asmodeus 🚀👨🏻‍💻
       </h1>
