@@ -1,4 +1,15 @@
-import { SiFacebook, SiGithub, SiLinkedin, SiX } from 'react-icons/si'
+import {
+  SiFacebook,
+  SiGithub,
+  SiLinkedin,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiReact,
+  SiSpringboot,
+  SiTailwindcss,
+  SiTypescript,
+  SiX,
+} from 'react-icons/si'
 
 export const SOCIALS = [
   {
@@ -20,5 +31,32 @@ export const SOCIALS = [
     lable: 'LinkedIn',
     url: 'linkedin.com/in/gressi-177',
     icon: SiLinkedin,
+  },
+]
+
+export const SKILLS = [
+  {
+    title: 'Next.js',
+    icon: SiNextdotjs,
+  },
+  {
+    title: 'Tailwind CSS',
+    icon: SiTailwindcss,
+  },
+  {
+    title: 'React',
+    icon: SiReact,
+  },
+  {
+    title: 'TypeScript',
+    icon: SiTypescript,
+  },
+  {
+    title: 'Node.js',
+    icon: SiNodedotjs,
+  },
+  {
+    title: 'Spring Boot',
+    icon: SiSpringboot,
   },
 ]
