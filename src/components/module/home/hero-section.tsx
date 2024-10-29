@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { PROFILE } from '@/constants'
 
 import Button from '../../ui/moving-border'
 
@@ -7,20 +8,14 @@ export default function HeroSection() {
     <div className="relative z-10 flex min-h-[60vh] animate-move-up flex-col items-center justify-between gap-14 lg:flex-row lg:gap-0">
       <div className="order-2 flex flex-col items-center space-y-10 text-center lg:order-1 lg:items-start lg:text-start">
         <h1 className="text-4xl font-bold lg:text-7xl">
-          Nice to meet you! 👋
+          {PROFILE.title}
           <br />
           <span className="underline decoration-green-500 underline-offset-8">
-            I&apos;m DoanTran.
+            I&apos;m {PROFILE.name}.
           </span>
         </h1>
-        <p className="w-96 text-lg text-gray-300">
-          Based in VietNam, I&apos;m a web developer passionate about building a
-          modern web application that users love.
-        </p>
-        <Link
-          href={'mailto:doantv.dev@gmail.com'}
-          className="group inline-block"
-        >
+        <p className="w-96 text-lg text-gray-300">{PROFILE.description}</p>
+        <Link href={`mailto:${PROFILE.email}`} className="group inline-block">
           <div>
             <h1 className="text-3xl font-bold transition-all group-hover:text-green-500">
               Contact Me 📭

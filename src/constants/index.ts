@@ -12,6 +12,15 @@ import {
   SiX,
 } from 'react-icons/si'
 
+export const PROFILE = {
+  nickName: 'Asmodeus',
+  name: 'DoanTran',
+  title: 'Nice to meet you! 👋',
+  description:
+    "Based in VietNam, I'm a web developer passionate about building a modern web application that users love.",
+  email: 'doantv.dev@gmail.com',
+}
+
 export const SOCIALS = [
   {
     lable: 'Facebook',
