@@ -5,6 +5,7 @@ import {
   SiNextdotjs,
   SiNodedotjs,
   SiReact,
+  SiShadcnui,
   SiSpringboot,
   SiTailwindcss,
   SiTypescript,
@@ -58,5 +59,44 @@ export const SKILLS = [
   {
     title: 'Spring Boot',
     icon: SiSpringboot,
+  },
+]
+
+export const PROJECTS = [
+  {
+    title: 'Elearning Platform',
+    imageUrl: '/images/project.webp',
+    icons: [SiNextdotjs, SiTailwindcss, SiShadcnui, SiReact],
+    url: '',
+  },
+  {
+    title: 'Elearning Platform',
+    imageUrl: '/images/project.webp',
+    icons: [SiNextdotjs, SiTailwindcss, SiShadcnui, SiReact],
+    url: '',
+  },
+  {
+    title: 'Elearning Platform',
+    imageUrl: '/images/project.webp',
+    icons: [SiNextdotjs, SiTailwindcss, SiShadcnui, SiReact],
+    url: '',
+  },
+  {
+    title: 'Elearning Platform',
+    imageUrl: '/images/project.webp',
+    icons: [SiNextdotjs, SiTailwindcss, SiShadcnui, SiReact],
+    url: '',
+  },
+  {
+    title: 'Elearning Platform',
+    imageUrl: '/images/project.webp',
+    icons: [SiNextdotjs, SiTailwindcss, SiShadcnui, SiReact],
+    url: '',
+  },
+  {
+    title: 'Elearning Platform',
+    imageUrl: '/images/project.webp',
+    icons: [SiNextdotjs, SiTailwindcss, SiShadcnui, SiReact],
+    url: '',
   },
 ]
