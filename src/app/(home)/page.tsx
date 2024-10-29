@@ -1,8 +1,8 @@
 import Footer from '@/components/common/footer'
-import HeroSection from '@/components/common/hero-section'
 import NavBar from '@/components/common/navbar'
-import ProjectSection from '@/components/common/project-section'
-import SkillSection from '@/components/common/skill-section'
+import HeroSection from '@/components/module/home/hero-section'
+import ProjectSection from '@/components/module/home/project-section'
+import SkillSection from '@/components/module/home/skill-section'
 
 export default function Home() {
   return (
